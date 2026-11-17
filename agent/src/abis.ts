@@ -1,0 +1,186 @@
+export const GUARDIAN_ACCOUNT_ABI = [
+  {
+    type: "function",
+    name: "OWNER",
+    stateMutability: "view",
+    inputs: [],
+    outputs: [{ name: "", type: "address" }],
+  },
+  {
+    type: "function",
+    name: "RECOVERY_VAULT",
+    stateMutability: "view",
+    inputs: [],
+    outputs: [{ name: "", type: "address" }],
+  },
+  {
+    type: "function",
+    name: "OWNER_PQC_KEY_HASH",
+    stateMutability: "view",
+    inputs: [],
+    outputs: [{ name: "", type: "bytes32" }],
+  },
+  {
+    type: "function",
+    name: "guardianAgent",
+    stateMutability: "view",
+    inputs: [],
+    outputs: [{ name: "", type: "address" }],
+  },
+  {
+    type: "function",
+    name: "perTxLimit",
+    stateMutability: "view",
+    inputs: [],
+    outputs: [{ name: "", type: "uint256" }],
+  },
+  {
+    type: "function",
+    name: "dailyLimit",
+    stateMutability: "view",
+    inputs: [],
+    outputs: [{ name: "", type: "uint256" }],
+  },
+  {
+    type: "function",
+    name: "spentToday",
+    stateMutability: "view",
+    inputs: [],
+    outputs: [{ name: "", type: "uint256" }],
+  },
+  {
+    type: "function",
+    name: "lastResetTimestamp",
+    stateMutability: "view",
+    inputs: [],
+    outputs: [{ name: "", type: "uint256" }],
+  },
+  {
+    type: "function",
+    name: "emergencyNonce",
+    stateMutability: "view",
+    inputs: [],
+    outputs: [{ name: "", type: "uint256" }],
+  },
+  {
+    type: "function",
+    name: "isFrozen",
+    stateMutability: "view",
+    inputs: [],
+    outputs: [{ name: "", type: "bool" }],
+  },
+  {
+    type: "function",
+    name: "allowlist",
+    stateMutability: "view",
+    inputs: [{ name: "target", type: "address" }],
+    outputs: [{ name: "allowed", type: "bool" }],
+  },
+  {
+    type: "function",
+    name: "reduceLimits",
+    stateMutability: "nonpayable",
+    inputs: [
+      { name: "newPerTxLimit", type: "uint256" },
+      { name: "newDailyLimit", type: "uint256" },
+    ],
+    outputs: [],
+  },
+  {
+    type: "function",
+    name: "freeze",
+    stateMutability: "nonpayable",
+    inputs: [],
+    outputs: [],
+  },
+  {
+    type: "function",
+    name: "forceMoveToVault",
+    stateMutability: "nonpayable",
+    inputs: [],
+    outputs: [],
+  },
+  {
+    type: "event",
+    name: "Deposited",
+    inputs: [
+      { name: "sender", type: "address", indexed: true },
+      { name: "amount", type: "uint256", indexed: false },
+    ],
+  },
+  {
+    type: "event",
+    name: "Executed",
+    inputs: [
+      { name: "target", type: "address", indexed: true },
+      { name: "value", type: "uint256", indexed: false },
+      { name: "data", type: "bytes", indexed: false },
+    ],
+  },
+  {
+    type: "event",
+    name: "LimitsReduced",
+    inputs: [
+      { name: "caller", type: "address", indexed: true },
+      { name: "newPerTxLimit", type: "uint256", indexed: false },
+      { name: "newDailyLimit", type: "uint256", indexed: false },
+    ],
+  },
+  {
+    type: "event",
+    name: "Frozen",
+    inputs: [{ name: "caller", type: "address", indexed: true }],
+  },
+  {
+    type: "event",
+    name: "EvacuatedToVault",
+    inputs: [
+      { name: "caller", type: "address", indexed: true },
+      { name: "beneficiary", type: "address", indexed: true },
+      { name: "amount", type: "uint256", indexed: false },
+    ],
+  },
+] as const;
+
+export const RECOVERY_VAULT_ABI = [
+  {
+    type: "function",
+    name: "balances",
+    stateMutability: "view",
+    inputs: [{ name: "account", type: "address" }],
+    outputs: [{ name: "balance", type: "uint256" }],
+  },
+  {
+    type: "function",
+    name: "registeredOwnerPqcKeyHash",
+    stateMutability: "view",
+    inputs: [{ name: "account", type: "address" }],
+    outputs: [{ name: "pqcKeyHash", type: "bytes32" }],
+  },
+  {
+    type: "function",
+    name: "nonces",
+    stateMutability: "view",
+    inputs: [{ name: "account", type: "address" }],
+    outputs: [{ name: "nonce", type: "uint256" }],
+  },
+  {
+    type: "event",
+    name: "Deposited",
+    inputs: [
+      { name: "account", type: "address", indexed: true },
+      { name: "sender", type: "address", indexed: true },
+      { name: "amount", type: "uint256", indexed: false },
+    ],
+  },
+  {
+    type: "event",
+    name: "WithdrawnWithPQC",
+    inputs: [
+      { name: "account", type: "address", indexed: true },
+      { name: "recipient", type: "address", indexed: true },
+      { name: "amount", type: "uint256", indexed: false },
+      { name: "nonce", type: "uint256", indexed: false },
+    ],
+  },
+] as const;

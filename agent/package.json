@@ -1,0 +1,23 @@
+{
+  "name": "@qoreguardian/agent",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Autonomous Post-Quantum AI Guardian Agent for QoreGuardian on QoreChain Testnet (qorechain-diana)",
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "build": "tsc --noEmit",
+    "test": "node --test src/riskEngine.test.ts",
+    "check:live": "node src/index.ts",
+    "start": "node src/server.ts",
+    "verify:phase12": "node src/verify-phase12.ts"
+  },
+  "dependencies": {
+    "@qorechain/sdk": "^0.14.0",
+    "viem": "^2.21.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.6.3"
+  }
+}

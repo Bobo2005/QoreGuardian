@@ -26,8 +26,8 @@
 - [x] Expose REST/SSE endpoint for dashboard live feed & simulation triggers ([agent/src/server.ts](file:///c:/Users/USER/Downloads/QoreGuardian/agent/src/server.ts))
 
 ## Phase 4: Next.js Dashboard & Simulations (Week 2)
-- [ ] Connect QoreX / RainbowKit wallet adapter on Chain ID `9800`
-- [ ] Build Treasury Status Card (balances, limits, freeze badge)
+- [x] Connect QoreX / EIP-1193 wallet adapter on Chain ID `9800` ([web/src/lib/qore.ts](file:///c:/Users/USER/Downloads/QoreGuardian/web/src/lib/qore.ts))
+- [x] Build Treasury Status Card (balances, limits, freeze badge, Scoped EVM Window) ([web/src/components/TreasuryStatusCard.tsx](file:///c:/Users/USER/Downloads/QoreGuardian/web/src/components/TreasuryStatusCard.tsx))
 - [ ] Build Explainable AI Feed (live Risk Score gauge + reasoning + `explore.qore.network` links)
 - [ ] Build **"Try to Drain Wallet with Leaked Key"** attacker panel (displays published classical key + fires real testnet drain attempts)
 - [ ] Build **"Simulate Prompt Injection Attack"** panel

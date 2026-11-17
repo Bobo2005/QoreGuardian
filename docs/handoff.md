@@ -1,7 +1,7 @@
 # Handoff Document: QoreGuardian
 
 **Date:** 17 November 2026  
-**Current Status:** Phases 1–12 Complete → Ready for Phase 13 (Frontend Dashboard Scaffold & Wallet Adapter)
+**Current Status:** Phases 1–13 Complete → Ready for Phase 14 (Explainable AI Feed & Real-Time Telemetry UI)
 
 ---
 
@@ -35,6 +35,10 @@
   - `agent/src/defender.ts`, `agent/src/monitor.ts`, `agent/src/server.ts`, and `agent/src/verify-phase12.ts` implemented and verified live on `qorechain-diana`.
   - High-risk simulation triggered `forceMoveToVault()` ([Tx](https://explore.qore.network/tx/0x783c14e7707f3bf502960a3d359925d2fb7d1475112eed34abfb1fb3a5582253)), freezing `GuardianAccount` (`0 QOR`) and moving `0.1 QOR` to `RecoveryVault`, with SSE telemetry verified.
 
+- **Phase 13 (Dashboard Core & QoreX Wallet Integration):**
+  - `web/src/lib/qore.ts`, `web/src/components/TreasuryStatusCard.tsx`, `web/src/App.tsx`, and `web/src/styles.css` wired to `qorechain-diana` (`9800`) and QoreX/EIP-1193 wallet switching.
+  - `tsc --noEmit && vite build` passed.
+
 ---
 
 ## 2. Current Workspace State
@@ -45,8 +49,8 @@
 ---
 
 ## 3. Immediate Next Actions (Start Here)
-1. **Phase 13:** Connect QoreX / wallet adapter in `web/` on `qorechain-diana` (`9800`) and wire live contract + agent telemetry reads.
-2. **Phase 14+:** Continue sequentially through `docs/20-phase-prompts.md`.
+1. **Phase 14:** Build the Explainable AI Feed in `web/` subscribed to `agent/` SSE (`/api/events`).
+2. **Phase 15+:** Continue sequentially through `docs/20-phase-prompts.md`.
 
 ---
 

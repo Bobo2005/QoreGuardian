@@ -1,7 +1,7 @@
 # Handoff Document: QoreGuardian
 
 **Date:** 17 November 2026  
-**Current Status:** Phases 1–13 Complete → Ready for Phase 14 (Explainable AI Feed & Real-Time Telemetry UI)
+**Current Status:** Phases 1–17 Complete → Ready for Phase 18 (Public Deployment, `README.md`, `AI_USAGE.md`, & Submission)
 
 ---
 
@@ -39,6 +39,22 @@
   - `web/src/lib/qore.ts`, `web/src/components/TreasuryStatusCard.tsx`, `web/src/App.tsx`, and `web/src/styles.css` wired to `qorechain-diana` (`9800`) and QoreX/EIP-1193 wallet switching.
   - `tsc --noEmit && vite build` passed.
 
+- **Phase 14 (Explainable AI Live Feed UI):**
+  - `web/src/components/ExplainableAiFeed.tsx` connects to `agent/` SSE (`/api/events`) and `/api/state`, rendering an animated 0–100 SVG Risk Score gauge, plain-English `reasons[]`, action badges (`ALLOW`, `REDUCED_LIMITS`, `FROZEN`, `EVACUATED`), and clickable `explore.qore.network` tx links.
+  - `tsc --noEmit && vite build` passed.
+
+- **Phase 15 (Q-Day Attacker Panel):**
+  - `web/src/components/QDayAttackerPanel.tsx` exposes the throwaway testnet key (`VITE_QDAY_THROWAWAY_PRIVATE_KEY`) and fires a real drain probe/tx against `GuardianAccount` while triggering `agent/` `/api/simulate` autonomous defense.
+  - `tsc --noEmit && vite build` passed.
+
+- **Phase 16 (Prompt Injection Lab & Post-Quantum Recovery Panel):**
+  - `web/src/components/PromptInjectionPanel.tsx` sends malicious prompt payloads to `agent/` `/api/simulate` and verifies `GuardianAccount.sol` cap/allowlist enforcement.
+  - `web/src/components/PqcRecoveryPanel.tsx` calls `RecoveryVault.buildWithdrawMessage`, signs with `pqcSign` (`ML-DSA-87`), and submits `withdrawWithPQC()` via the connected wallet.
+  - `tsc --noEmit && vite build` passed.
+
+- **Phase 17 (End-to-End Testnet Dress Rehearsal):**
+  - `agent/src/verify-phase17.ts` ran 3 consecutive live drills on `qorechain-diana` (Reset/Fund → Prompt Injection → Classical Key Leak → `forceMoveToVault()` → `ML-DSA-87` `withdrawWithPQC()` → `emergencyEvacuate()`), all 3 passing with zero manual intervention.
+
 ---
 
 ## 2. Current Workspace State
@@ -49,8 +65,7 @@
 ---
 
 ## 3. Immediate Next Actions (Start Here)
-1. **Phase 14:** Build the Explainable AI Feed in `web/` subscribed to `agent/` SSE (`/api/events`).
-2. **Phase 15+:** Continue sequentially through `docs/20-phase-prompts.md`.
+1. **Phases 18–20:** Deploy public dashboard/agent, write `README.md` and `AI_USAGE.md`, record demo video, and submit to QoreChain Developer Fest 2026.
 
 ---
 

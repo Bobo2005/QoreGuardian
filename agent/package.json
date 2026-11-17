@@ -10,7 +10,8 @@
     "test": "node --test src/riskEngine.test.ts",
     "check:live": "node src/index.ts",
     "start": "node src/server.ts",
-    "verify:phase12": "node src/verify-phase12.ts"
+    "verify:phase12": "node src/verify-phase12.ts",
+    "verify:phase17": "node src/verify-phase17.ts"
   },
   "dependencies": {
     "@qorechain/sdk": "^0.14.0",

@@ -28,10 +28,10 @@
 ## Phase 4: Next.js Dashboard & Simulations (Week 2)
 - [x] Connect QoreX / EIP-1193 wallet adapter on Chain ID `9800` ([web/src/lib/qore.ts](file:///c:/Users/USER/Downloads/QoreGuardian/web/src/lib/qore.ts))
 - [x] Build Treasury Status Card (balances, limits, freeze badge, Scoped EVM Window) ([web/src/components/TreasuryStatusCard.tsx](file:///c:/Users/USER/Downloads/QoreGuardian/web/src/components/TreasuryStatusCard.tsx))
-- [ ] Build Explainable AI Feed (live Risk Score gauge + reasoning + `explore.qore.network` links)
-- [ ] Build **"Try to Drain Wallet with Leaked Key"** attacker panel (displays published classical key + fires real testnet drain attempts)
-- [ ] Build **"Simulate Prompt Injection Attack"** panel
-- [ ] Build **Post-Quantum Recovery** panel (`ML-DSA-87` signature unlock from `RecoveryVault`)
+- [x] Build Explainable AI Feed (live Risk Score gauge + reasoning + `explore.qore.network` links) ([web/src/components/ExplainableAiFeed.tsx](file:///c:/Users/USER/Downloads/QoreGuardian/web/src/components/ExplainableAiFeed.tsx))
+- [x] Build **"Try to Drain Wallet with Leaked Key"** attacker panel (displays published classical key + fires real testnet drain attempts) ([web/src/components/QDayAttackerPanel.tsx](file:///c:/Users/USER/Downloads/QoreGuardian/web/src/components/QDayAttackerPanel.tsx))
+- [x] Build **"Simulate Prompt Injection Attack"** panel ([web/src/components/PromptInjectionPanel.tsx](file:///c:/Users/USER/Downloads/QoreGuardian/web/src/components/PromptInjectionPanel.tsx))
+- [x] Build **Post-Quantum Recovery** panel (`ML-DSA-87` signature unlock from `RecoveryVault`) ([web/src/components/PqcRecoveryPanel.tsx](file:///c:/Users/USER/Downloads/QoreGuardian/web/src/components/PqcRecoveryPanel.tsx))
 
 ## Phase 5: Polish, Video & Submission (Week 3)
 - [ ] Deploy live public dashboard & agent backend for zero-setup judging + QoreX *People's Choice*

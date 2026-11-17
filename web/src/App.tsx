@@ -1,4 +1,8 @@
 import { useCallback, useEffect, useState } from "react";
+import { ExplainableAiFeed } from "./components/ExplainableAiFeed";
+import { PqcRecoveryPanel } from "./components/PqcRecoveryPanel";
+import { PromptInjectionPanel } from "./components/PromptInjectionPanel";
+import { QDayAttackerPanel } from "./components/QDayAttackerPanel";
 import { TreasuryStatusCard } from "./components/TreasuryStatusCard";
 import {
   QORE_CHAIN_ID,
@@ -85,6 +89,10 @@ export function App(): JSX.Element {
           error={error}
           onRefresh={() => void refresh()}
         />
+        <QDayAttackerPanel onComplete={() => void refresh()} />
+        <PromptInjectionPanel ownerAddress={status?.owner} onComplete={() => void refresh()} />
+        <PqcRecoveryPanel wallet={wallet} status={status} onComplete={() => void refresh()} />
+        <ExplainableAiFeed onDefenseExecuted={() => void refresh()} />
       </main>
     </div>
   );

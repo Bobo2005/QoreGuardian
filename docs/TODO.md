@@ -22,8 +22,8 @@
 - [x] Scaffold `agent/` (Node.js + TypeScript + `viem` + `@qorechain/sdk`)
 - [x] Verify Scoped EVM Window opener/validator on `qorechain-diana` ([scripts/phase8-scoped-window.ts](file:///c:/Users/USER/Downloads/QoreGuardian/scripts/phase8-scoped-window.ts)) (`allowedTargets` locking; wire to `GuardianAccount` address in `agent/`)
 - [x] Implement Explainable Risk Engine (0–100 Risk Score + plain-English reasons + `simulateWithRiskScore`) ([agent/src/riskEngine.ts](file:///c:/Users/USER/Downloads/QoreGuardian/agent/src/riskEngine.ts))
-- [ ] Implement automated escalation (`reduceLimits` → `freeze` → `forceMoveToVault`)
-- [ ] Expose REST/SSE endpoint for dashboard live feed & simulation triggers
+- [x] Implement automated escalation (`reduceLimits` → `freeze` → `forceMoveToVault`) ([agent/src/defender.ts](file:///c:/Users/USER/Downloads/QoreGuardian/agent/src/defender.ts), [agent/src/monitor.ts](file:///c:/Users/USER/Downloads/QoreGuardian/agent/src/monitor.ts))
+- [x] Expose REST/SSE endpoint for dashboard live feed & simulation triggers ([agent/src/server.ts](file:///c:/Users/USER/Downloads/QoreGuardian/agent/src/server.ts))
 
 ## Phase 4: Next.js Dashboard & Simulations (Week 2)
 - [ ] Connect QoreX / RainbowKit wallet adapter on Chain ID `9800`

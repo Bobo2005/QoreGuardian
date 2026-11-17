@@ -1,7 +1,7 @@
 # Handoff Document: QoreGuardian
 
-**Date:** 16 November 2026  
-**Current Status:** Phases 1–11 Complete → Ready for Phase 12 (Automated Defender Loop & Telemetry Server)
+**Date:** 17 November 2026  
+**Current Status:** Phases 1–12 Complete → Ready for Phase 13 (Frontend Dashboard Scaffold & Wallet Adapter)
 
 ---
 
@@ -31,6 +31,10 @@
   - `agent/src/riskEngine.ts` integrates `simulateWithRiskScore` from `@qorechain/sdk` with deterministic contextual scoring (`ALLOW`, `REDUCE_LIMITS`, `FREEZE`, `FREEZE_AND_FORCE_MOVE`) and plain-English `reasons[]`.
   - `agent/src/riskEngine.test.ts` verifies normal, suspicious, prompt-injection, and key-leak scenarios (5/5 passing).
 
+- **Phase 12 (Automated Defender Loop & Telemetry Server):**
+  - `agent/src/defender.ts`, `agent/src/monitor.ts`, `agent/src/server.ts`, and `agent/src/verify-phase12.ts` implemented and verified live on `qorechain-diana`.
+  - High-risk simulation triggered `forceMoveToVault()` ([Tx](https://explore.qore.network/tx/0x783c14e7707f3bf502960a3d359925d2fb7d1475112eed34abfb1fb3a5582253)), freezing `GuardianAccount` (`0 QOR`) and moving `0.1 QOR` to `RecoveryVault`, with SSE telemetry verified.
+
 ---
 
 ## 2. Current Workspace State
@@ -41,8 +45,8 @@
 ---
 
 ## 3. Immediate Next Actions (Start Here)
-1. **Phase 12:** Implement `agent/src/monitor.ts`, `agent/src/defender.ts`, and `agent/src/server.ts`.
-2. **Phase 13+:** Continue sequentially through `docs/20-phase-prompts.md`.
+1. **Phase 13:** Connect QoreX / wallet adapter in `web/` on `qorechain-diana` (`9800`) and wire live contract + agent telemetry reads.
+2. **Phase 14+:** Continue sequentially through `docs/20-phase-prompts.md`.
 
 ---
 

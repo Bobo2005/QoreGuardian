@@ -154,7 +154,7 @@ export function createGuardianServer(opts?: { port?: number; pollIntervalMs?: nu
     start: () =>
       new Promise<number>((resolve) => {
         monitor.start(opts?.pollIntervalMs ?? 5000);
-        server.listen(port, () => {
+        server.listen(port, "0.0.0.0", () => {
           const addr = server.address();
           resolve(typeof addr === "object" && addr ? addr.port : port);
         });

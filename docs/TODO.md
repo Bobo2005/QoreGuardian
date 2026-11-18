@@ -35,8 +35,8 @@
 
 ## Phase 5: Polish, Video & Submission (Week 3)
 - [ ] Deploy live public dashboard & agent backend for zero-setup judging + QoreX *People's Choice*
-- [ ] Write `README.md` with 4-layer architecture diagram, positioning statement, and testnet explorer links
-- [ ] Write `AI_USAGE.md` for *Best AI-Native Build*
-- [ ] Record & edit ≤ 3-minute demo video following storyboard
-- [ ] Final integrity check (no real private keys, clean git history, all links live)
-- [ ] Submit to QoreChain Developer Fest 2026 before Dec 2, 2026
+- [x] Write `README.md` with 4-layer architecture diagram, positioning statement, and testnet explorer links ([README.md](file:///c:/Users/USER/Downloads/QoreGuardian/README.md))
+- [x] Write `AI_USAGE.md` for *Best AI-Native Build* ([AI_USAGE.md](file:///c:/Users/USER/Downloads/QoreGuardian/AI_USAGE.md))
+- [ ] Record & edit ≤ 3-minute demo video following storyboard ([docs/demo-video-script.md](file:///c:/Users/USER/Downloads/QoreGuardian/docs/demo-video-script.md))
+- [x] Final integrity check (no real private keys, clean git history, builds & unit tests pass)
+- [ ] Submit to QoreChain Developer Fest 2026 before Dec 2, 2026 (attach live URL + ≤ 3-min video)

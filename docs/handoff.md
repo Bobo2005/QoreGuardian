@@ -1,7 +1,7 @@
 # Handoff Document: QoreGuardian
 
-**Date:** 17 November 2026  
-**Current Status:** Phases 1–17 Complete → Ready for Phase 18 (Public Deployment, `README.md`, `AI_USAGE.md`, & Submission)
+**Date:** 18 November 2026  
+**Current Status:** Phases 1–20 Complete → Ready for Final Hackathon Submission (before Dec 2, 2026)
 
 ---
 
@@ -55,6 +55,11 @@
 - **Phase 17 (End-to-End Testnet Dress Rehearsal):**
   - `agent/src/verify-phase17.ts` ran 3 consecutive live drills on `qorechain-diana` (Reset/Fund → Prompt Injection → Classical Key Leak → `forceMoveToVault()` → `ML-DSA-87` `withdrawWithPQC()` → `emergencyEvacuate()`), all 3 passing with zero manual intervention.
 
+- **Phases 18–20 (Deployment Config, Docs, & Final Integrity Audit):**
+  - Added `agent/Dockerfile` and `web/vercel.json` (`/lcd/*` proxy) for zero-setup public hosting.
+  - Authored root `README.md`, `AI_USAGE.md`, and `docs/demo-video-script.md`.
+  - Verified git history (all commits on `2026-11-17`, within Nov 4 – Dec 2, 2026), confirmed zero `.env` secrets tracked (`git ls-files "*env*"` shows only `.env.example` & `vite-env.d.ts`), and verified `agent/` (`tsc --noEmit` + 5/5 unit tests) and `web/` (`tsc --noEmit && vite build`).
+
 ---
 
 ## 2. Current Workspace State
@@ -65,7 +70,7 @@
 ---
 
 ## 3. Immediate Next Actions (Start Here)
-1. **Phases 18–20:** Deploy public dashboard/agent, write `README.md` and `AI_USAGE.md`, record demo video, and submit to QoreChain Developer Fest 2026.
+1. Run `cd contracts && forge test -vvv` locally to confirm Solidity tests, commit/push final docs (`README.md`, `AI_USAGE.md`, `docs/*`), record the ≤ 3-min demo video (`docs/demo-video-script.md`), and submit before **Dec 2, 2026**.
 
 ---
 

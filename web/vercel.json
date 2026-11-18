@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/lcd/(.*)",
+      "destination": "https://api-testnet.qore.host/$1"
+    }
+  ]
+}

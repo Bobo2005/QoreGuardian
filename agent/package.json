@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
+  "engines": {
+    "node": ">=24.0.0"
+  },
   "description": "Autonomous Post-Quantum AI Guardian Agent for QoreGuardian on QoreChain Testnet (qorechain-diana)",
   "scripts": {
     "typecheck": "tsc --noEmit",

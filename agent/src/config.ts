@@ -43,7 +43,7 @@ export const QORE_REST_URL = getEnv("QORE_REST_URL", "https://api-testnet.qore.h
 export const QORE_CHAIN_ID = Number(getEnv("QORE_CHAIN_ID", "9800"));
 export const QORE_COSMOS_CHAIN_ID = getEnv("QORE_COSMOS_CHAIN_ID", "qorechain-diana");
 export const EXPLORER_URL = getEnv("EXPLORER_URL", "https://explore.qore.network");
-export const AGENT_PORT = Number(getEnv("AGENT_PORT", "8787"));
+export const AGENT_PORT = Number(process.env.PORT ?? getEnv("AGENT_PORT", "8787"));
 
 export const GUARDIAN_PRIVATE_KEY = getOptionalEnv("GUARDIAN_PRIVATE_KEY") as `0x${string}` | undefined;
 export const GUARDIAN_PQC_RECOVERY_CODE = getOptionalEnv("GUARDIAN_PQC_RECOVERY_CODE");
